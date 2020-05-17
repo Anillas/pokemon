@@ -1,0 +1,41 @@
+*{
+	margin: 0px;
+	padding: 0px
+}
+body{
+	background-color: #d2dce6;
+}
+.menu{
+	width: 100vw;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: inline-flex;
+	user-select: none;
+	background-color: #fafafa
+}
+.menu h2{
+	margin-top: 2px;
+	margin-left: 10px;
+	width: 50%;
+}
+.pages{
+	width: 50%;
+	margin-right: 5px;
+}
+.pages div{
+	float: right;
+}
+.pages button{
+	font-size: 26px;
+	margin-left: 4px;
+	border-radius: 0px;
+	padding-bottom: 0px!important;
+}
+.pages button:focus{
+	border-color: transparent;
+	box-shadow: none;
+}
+.pages button:hover{
+	border-bottom: 1.5px solid gray;
+	transition-duration: 0.75s;
+}
