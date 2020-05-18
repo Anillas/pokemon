@@ -30,19 +30,40 @@
 	<div class="container">
 		<div class="tab-content" id="pills-tabContent">
 			<div class="pedidos tab-pane fade show active" id="pills-pedidos" role="tabpanel" aria-labelledby="pills-pedidos-tab">
-				<div class="config">
+				<div class="config" id="config">
 					<button class="btn adicionar"><i class="far fa-plus-square"></i>Adicionar</button>
-					<button class="btn editar"><i class="far fa-edit"></i>Editar</button>
-					<button class="btn deletar"><i class="far fa-trash-alt"></i>Deletar</button>
+					<!--button class="btn editar"><i class="far fa-edit"></i>Editar</button-->
+					<button class="btn deletar" onclick="odel()"><i class="far fa-trash-alt"></i>Deletar</button>
+				</div>
+				<div class="config" id="bdel">
+					<button class="btn editar" onclick="cdel()"><i class="far fa-times-circle"></i>Cancelar</button>
+					<button class="btn deletar"><i class="far fa-check-circle"></i>Confirmar</button>
 				</div>
 				<div class="row">
 					<div class="col-sm" style="border-right: 0.5px solid gray;">
 						<h3>Pendentes</h3>
-						<p aria-label="Iniciar">Dona Ana - Camiseta</p>
+						<div class="item">
+							<input type="checkbox" name="" class="check">
+							<p aria-label="✓" class="aria">Ana - Camiseta</p>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="" class="check">
+							<p aria-label="✓" class="aria">Maria - Blusa</p>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="" class="check">
+							<p aria-label="✓" class="aria">José - Camisa</p>
+						</div>
+						<div class="item">
+							<input type="checkbox" name="" class="check">
+							<p aria-label="✓" class="aria">Dora - Blusa</p>
+						</div>
 					</div>
 					<div class="col-sm" style="border-right: 0.5px solid gray;">
 						<h3>Em Andamento</h3>
-						<p aria-label="Finalizar">Seu Jão - Calça</p>
+						<p aria-label="✓">Seu Jão - Calça</p>
+						<p aria-label="✓">Nicolas - Casaco</p>
+						<p aria-label="✓">Matheus - Casaco</p>
 					</div>
 					<div class="col-sm">
 						<h3>Finalizados</h3>
@@ -91,6 +112,20 @@
 		function change_light() {
 			var include = document.getElementById("theme");
 			include.href = "cascata_light_mode.css";
+		}
+		function odel(){
+			var bdel = document.getElementById("bdel");
+			var config = document.getElementById("config")
+			config.style = "display: none;";
+			bdel.style = "display: block;";
+			var check = document.getElementsByClassName("check");
+			check.style = "display: block;";
+		}
+		function cdel(){
+			var bdel = document.getElementById("bdel");
+			var config = document.getElementById("config")
+			config.style = "display: block;";
+			bdel.style = "display: none;";
 		}
 	</script>
 </body>
