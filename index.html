@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="icon.png">
+	<link rel="stylesheet" type="text/css" href="include/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="include/fontawesome/css/all.min.css">
+	<link id="theme" rel="stylesheet" type="text/css" href="cascata_dark_mode.css">
+	<title>Sistema</title>
+</head>
+<body>
+	<!--	INICIO MENU SUPERIOR	-->
+
+	<div class="menu">
+		<h2>Sistema - NomePágina</h2>
+		<div class="pages">
+			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+				<li class="nav-item"><a class="nav-link active" id="pills-pedidos-tab" data-toggle="pill" href="#pills-pedidos" role="tab" aria-controls="pills-pedidos" aria-selected="true">Pedidos</a></li>
+				<li class="nav-item"><a class="nav-link" id="pills-financeiro-tab" data-toggle="pill" href="#pills-financeiro" role="tab" aria-controls="pills-financeiro" aria-selected="false">Financeiro</a></li>
+				<button class="btn sun" onclick="change_dark()"><i class="far fa-sun" id="sun"></i></button>
+				<button class="btn moon" onclick="change_light()"><i class="far fa-moon"></i></button>
+			</ul>
+		</div>
+	</div>
+
+	<!--	FIM MENU SUPERIOR	-->
+
+	<!--	INICIO CONTEÚDO	-->
+
+	<div class="container">
+		<div class="tab-content" id="pills-tabContent">
+			<div class="pedidos tab-pane fade show active" id="pills-pedidos" role="tabpanel" aria-labelledby="pills-pedidos-tab">
+				<div class="config">
+					<button class="btn adicionar"><i class="far fa-plus-square"></i>Adicionar</button>
+					<button class="btn editar"><i class="far fa-edit"></i>Editar</button>
+					<button class="btn deletar"><i class="far fa-trash-alt"></i>Deletar</button>
+				</div>
+				<div class="row">
+					<div class="col-sm" style="border-right: 0.5px solid gray;">
+						<h3>Pendentes</h3>
+						<p aria-label="Iniciar">Dona Ana - Camiseta</p>
+					</div>
+					<div class="col-sm" style="border-right: 0.5px solid gray;">
+						<h3>Em Andamento</h3>
+						<p aria-label="Finalizar">Seu Jão - Calça</p>
+					</div>
+					<div class="col-sm">
+						<h3>Finalizados</h3>
+						<p>Francisco - Boné</p>
+					</div>
+				</div>
+			</div>
+			<div class="financeiro tab-pane fade" id="pills-financeiro" role="tabpanel" aria-labelledby="pills-financeiro-tab">
+				<div class="saldo">
+					<h1>SALDO</h1>
+					<div>
+						<p class="real"> 1.500</p><p class="centavo">,00 R$</p>
+					</div>
+				</div>
+				<div class="mensal">
+					<div class="sun card bg-light mb-3">
+						<div class="card-header">Variações de Saldo nos Últimos 30 Dias</div>
+						<div class="card-body">
+							<h5 class="card-title">Lorem Ipsum</h5>
+							<p class="card-text">parágrafo que será retirado depois</p>
+						</div>
+					</div>
+					<div class="moon card text-white bg-dark mb-3">
+						<div class="card-header">Variações de Saldo nos Últimos 30 Dias</div>
+						<div class="card-body">
+							<h5 class="card-title">Lorem Ipsum</h5>
+							<p class="card-text">parágrafo que será retirado depois</p>
+						</div>
+					</div>
+				</div>
+				<div class="grafico">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--	INICIO JAVASCRIPT	-->
+
+	<script src="include/bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+	<script src="include/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function change_dark() {
+			var include = document.getElementById("theme");
+			include.href = "cascata_dark_mode.css";
+		}
+		function change_light() {
+			var include = document.getElementById("theme");
+			include.href = "cascata_light_mode.css";
+		}
+	</script>
+</body>
+</html>
