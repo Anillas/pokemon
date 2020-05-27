@@ -1,9 +1,9 @@
 # Sistema de controle de pedidos
 > Esse sistema está sendo criado para controlar os pedidos feitos pelos clientes e o saldo do gerente.
 
-[![PHP Version][php-image]]
-[![Bootstrap Version][bootstrap-image]]
-[![Font Awesome Version][fontawesome-image]]
+![PHP](https://img.shields.io/badge/php-v7.4.6-blue)
+![Bootstrap](https://img.shields.io/static/v1?label=bootstrap&message=v4.4&color=blueviolet)
+![FontAwesome](https://img.shields.io/static/v1?label=font%20awesome&message=v5.13.0&color=9cf)
 
 A página de pedidos adiciona e remove pedidos com os botões superiores e lista os que estão no banco nas tabelas abaixo. A página de finanças mostra o saldo atual e os ganhos. !! O SISTEMA ESTÁ ESTÁTICO, NÃO POSSUI CONEXÃO COM O BANCO AINDA !!
 
@@ -32,7 +32,3 @@ No momento o sistema necessita apenas do php para utilização. Em atualizaçõe
 
 * 2.0
     * GRANDE atualização - organização dos elementos no HTML e nas pastas dos arquivos. O sistema ainda não possui nenhuma conexão com o banco de dados! Do jeito que está falta apenas inserir novas funcionalidades, assim como o aprimoramento das existentes.
-
-[php-image]: https://img.shields.io/badge/php-v7.4.6-blue
-[bootstrap-image]: https://img.shields.io/static/v1?label=bootstrap&message=v4.4&color=blueviolet
-[travis-image]: https://img.shields.io/static/v1?label=font%20awesome&message=v5.13.0&color=9cf
