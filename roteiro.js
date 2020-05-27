@@ -1,13 +1,27 @@
-function change_dark() {
-	var include = document.getElementById("theme");
-	include.href = "cascata_dark_mode.css";
+let tema;
+tema = localStorage.getItem('tema');
+if (tema === 'escuro'){
+	var estilo = document.getElementById("tema");
+    estilo.href = "cascata_modo_escuro.css";
+    $("#mudarTema").prop("checked", true);
+}else{
+	var estilo = document.getElementById("tema");
+    estilo.href = "cascata_modo_claro.css";
 }
-function change_light() {
-	//var include = document.getElementById("theme");
-	//include.href = "cascata_light_mode.css";
-	alert("Essa opção estará disponível em breve...");
-}
-function odel(){
+$('#mudarTema').click(function() {
+	if ($(this).is(':checked')) {
+		var estilo = document.getElementById("tema");
+		estilo.href = "cascata_modo_escuro.css";
+		localStorage.setItem('tema', 'escuro');
+		tema = localStorage.getItem('tema');
+	}else if ($(this).is(':not(:checked)')) {
+		var estilo = document.getElementById("tema");
+		estilo.href = "cascata_modo_claro.css";
+		localStorage.setItem('tema', 'claro');
+		tema = localStorage.getItem('tema');
+	}
+});
+function deletarPedidos(){
 	var bdel = document.getElementById("bdel");
 	var config = document.getElementById("config")
 	config.style = "display: none;";
@@ -20,7 +34,7 @@ function odel(){
 		select[i].style = "display: block;";
 	}
 }
-function cdel(){
+function cancelarDeletarPedidos(){
 	var bdel = document.getElementById("bdel");
 	var config = document.getElementById("config")
 	config.style = "display: block;";
@@ -37,7 +51,12 @@ function cdel(){
 		check[i].checked = false;
 	}
 }
-
+function paginaPedido() {
+	document.getElementById("nomePagina").innerHTML = "Sistema - Pedidos";
+}
+function paginaFinanceiro() {
+	document.getElementById("nomePagina").innerHTML = "Sistema - Finanças";
+}
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
@@ -57,3 +76,9 @@ function cdel(){
     });
   }, false);
 })();
+$('#modalADC').on('hidden.bs.modal', function (e) {
+	$("#form-modalADC").removeClass("was-validated");
+	$("#nomeCliente").val("");
+	$('#selecao').prop('selectedIndex',0);
+	$("#descricao").val("");
+})
